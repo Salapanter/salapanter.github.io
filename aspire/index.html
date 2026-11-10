@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aspire – Alexandra Hvile</title>
+  <meta name="description" content="Aspire: en jordfuktighetsmåler for hagen, laget i IN1060 ved UiO. Case av Alexandra Hvile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../stil.css">
+</head>
+<body>
+  <a class="hopp" href="#hoved">Hopp til innholdet</a>
+
+  <header class="topp innhold">
+    <a class="navn" href="../">Alexandra Hvile</a>
+    <nav aria-label="Hovedmeny">
+      <a href="../#prosjekter">Prosjekter</a>
+      <a href="../#om">Om meg</a>
+      <a href="../#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="hoved">
+    <div class="case-topp innhold">
+      <a class="tilbake" href="../#prosjekter">Tilbake til prosjektene</a>
+      <h1>Aspire</h1>
+      <p class="ingress">En jordfuktighetsmåler for hagen. Du trykker på en knapp, og et lys viser om jorda er tørr, passe fuktig eller våt, enten du står ute ved bedet eller inne i huset.</p>
+
+      <dl class="fakta">
+        <div><dt>Emne</dt><dd>IN1060 Bruksorientert design, UiO</dd></div>
+        <div><dt>Periode</dt><dd>Februar–juni 2026</dd></div>
+        <div><dt>Team</dt><dd>Fire studenter</dd></div>
+        <div><dt>Min rolle</dt><dd>Arduino-kode, teknisk løsning og teknisk rapport</dd></div>
+      </dl>
+    </div>
+
+    <figure class="storbilde innhold">
+      <img src="../bilder/husenhet.jpg" alt="Husenheten: en treboks med utskårne symboler for sol, sky og dråpe, og en knapp." width="1464" height="1192">
+    </figure>
+
+    <div class="innhold">
+
+      <section class="kapittel" aria-labelledby="problem">
+        <h2 id="problem">Problemet</h2>
+        <div>
+          <p>Årets tema i emnet var «sted», og vi valgte hagen. Vi snakket med tre hagebrukere med ulike typer hager: to private hager og et felles hageområde i et borettslag.</p>
+          <p>Alle tre fortalte det samme: det er vanskelig å holde oversikt over hva plantene trenger, særlig i perioder der man ikke er i hagen hver dag. Fuktigheten i jorda er vanskelig å bedømme med øyet, og for den som har en parsellhage et stykke unna, betyr usikkerheten ekstra turer.</p>
+          <blockquote>Hvordan kan vi gjøre det enklere for hagebrukere å holde oversikt over når hagen trenger vann?</blockquote>
+        </div>
+      </section>
+
+      <section class="kapittel" aria-labelledby="brukerne">
+        <h2 id="brukerne">Arbeid med brukerne</h2>
+        <div>
+          <p>Vi brukte kvalitative metoder for å forstå brukerne på deres egne premisser. Jeg hadde fire møter med min bruker gjennom semesteret: et første intervju, et oppfølgingsintervju, en workshop og en brukertest av den ferdige prototypen.</p>
+          <ul>
+            <li><strong>Intervju</strong> om rutiner, erfaringer og hva som er vanskelig i hagen.</li>
+            <li><strong>Observasjon</strong> i brukernes egne hager, for å se hva de faktisk gjør, ikke bare hva de sier at de gjør.</li>
+            <li><strong>Workshop</strong> der brukerne vurderte skisser og papp-prototyper og var med på å bestemme form og funksjon.</li>
+            <li><strong>Brukertest</strong> av den ferdige løsningen i hagen.</li>
+          </ul>
+          <p>Det var ikke mulig å samle alle brukerne samtidig, så vi holdt individuelle workshoper. Det ga hver bruker mer plass og lot oss tilpasse oss den enkeltes hage.</p>
+          <div class="bilder">
+            <figure class="bilde bred hel">
+              <img src="../bilder/tematisk-analyse.jpg" alt="Tematisk analyse av et intervju, sortert i fire fargede kategorier: vanning og oppfølging, planlegging, ønsker og frustrasjoner, og dyrking i hagen." width="1600" height="731" loading="lazy">
+              <figcaption>Tematisk analyse av et av intervjuene.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="kapittel" aria-labelledby="prosess">
+        <h2 id="prosess">Fra skisse til prototype</h2>
+        <div>
+          <ol class="steg">
+            <li>
+              <h3>Tema og idé</h3>
+              <p>Vi tolket temaet «sted» bredt og vurderte alt fra barnehager og eldrehjem til skolen før vi landet på hagen. Før vi møtte brukerne besøkte vi Botanisk hage i Oslo for å forstå mer om planter og stell.</p>
+            </li>
+            <li>
+              <h3>Intervjuer og analyse</h3>
+              <p>Intervjuene og observasjonene viste at problemet ikke var mangel på kunnskap, men mangel på oversikt over tid.</p>
+            </li>
+            <li>
+              <h3>Skisser, papp-prototyper og workshop</h3>
+              <p>Vi skisserte flere formkonsepter, blant annet en stein og et lite hus, og bygde enkle papp-prototyper med lys. I workshopen pekte brukerne ut retningene de syntes var mest relevante, og vi landet på soppen.</p>
+              <div class="bilder tre">
+                <figure class="bilde hel"><img src="../bilder/skisse-stein.jpg" alt="Blyantskisse av en sensor formet som en mosegrodd stein." width="994" height="1400" loading="lazy"></figure>
+                <figure class="bilde hel"><img src="../bilder/soppformer.jpg" alt="Sju tegnede soppformer i ulike farger, nummerert for at brukerne kunne velge." width="1580" height="1116" loading="lazy"></figure>
+                <figure class="bilde"><img src="../bilder/papp-prototype.jpg" alt="Papp-prototype av husenheten med tre lysende felt på toppen." width="563" height="508" loading="lazy"></figure>
+              </div>
+            </li>
+            <li>
+              <h3>Funksjonell prototype</h3>
+              <p>Planen var å la soppen og husenheten snakke trådløst over LoRa-radio, men forbindelsen ble ikke stabil nok. For å beholde kjernefunksjonen koblet vi i stedet to Arduino Uno-kort sammen over I2C, som simulerer langdistansen. Soppen ble 3D-printet, og husenheten ble laget i laserkuttet tre.</p>
+              <div class="bilder">
+                <figure class="bilde"><img src="../bilder/led-test.jpg" alt="Arduino Uno koblet til et koblingsbrett med tre lysdioder, der den gule lyser." width="1200" height="1600" loading="lazy"><figcaption>Første test av lysene på koblingsbrett.</figcaption></figure>
+                <figure class="bilde"><img src="../bilder/3d-print.jpg" alt="De 3D-printede delene av soppen: en rød hatt og en hvit fot, lagt ved siden av hverandre." width="1030" height="1174" loading="lazy"><figcaption>3D-printede deler av soppen.</figcaption></figure>
+              </div>
+            </li>
+            <li>
+              <h3>Brukertest</h3>
+              <p>Til slutt testet brukerne den ferdige løsningen. Målet var at det skulle holde med ett knappetrykk og ett tydelig lys, uten skjerm, tall eller meny.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="kapittel" aria-labelledby="losning">
+        <h2 id="losning">Slik virker det</h2>
+        <div>
+          <p>Systemet har to deler. <strong>Soppen</strong> står i bedet med en jordfuktighetssensor, tre lysdioder og en knapp i en av prikkene på hatten. <strong>Husenheten</strong> står inne og viser status bak tre utskårne symboler: sol for tørt, sky for passe og dråpe for vått.</p>
+          <p>Soppen fungerer alene: trykker du på den, måler den jorda der og da. Trykker du på husenheten, sender den bokstaven «R» til soppen over I2C, venter på målingen og får statusen tilbake som ett tall. Begge enhetene sover mellom målingene og våkner på knappetrykk, slik at soppen kan stå ute lenge.</p>
+
+          <div class="maler" id="maler">
+            <h3>Prøv måleren</h3>
+            <p>Sensoren gir en råverdi der høyere tall betyr tørrere jord. Soppen tar fem målinger, bruker gjennomsnittet og sammenligner med tersklene vi fant ved å teste i ekte jord.</p>
+            <label for="raa">Råverdi fra sensoren</label>
+            <input type="range" id="raa" min="100" max="600" step="5" value="470" aria-describedby="resultat">
+            <div class="skala" aria-hidden="true"><span>Vått</span><span>Tørt</span></div>
+            <div class="lys">
+              <div class="lampe rod" aria-hidden="true"></div>
+              <div class="lampe gul" aria-hidden="true"></div>
+              <div class="lampe gronn" aria-hidden="true"></div>
+              <div class="lesning" id="resultat" aria-live="polite"><strong>Tørt</strong><span>Råverdi 470</span></div>
+            </div>
+          </div>
+
+          <p>Slik oversetter soppen råverdien til en status:</p>
+<pre><code>Status evaluateSensor(int raaverdi)
+{
+  if (raaverdi &gt; 430)  return CRITICAL;  // tørt, rødt lys
+  if (raaverdi &gt;= 230) return NORMAL;    // passe, gult lys
+  return GOOD;                           // vått, grønt lys
+}</code></pre>
+          <p>Hele koden ligger her: <a href="kode/soppen_follower.ino">soppen</a> og <a href="kode/husenhet_leader.ino">husenheten</a>.</p>
+
+          <div class="bilder">
+            <figure class="bilde"><img src="../bilder/sopp-naerbilde.jpg" alt="Nærbilde av den 3D-printede soppen med rød hatt og hvit, riflet fot." width="1002" height="1252" loading="lazy"></figure>
+            <figure class="bilde"><img src="../bilder/innmat-skisse.jpg" alt="Tegning av soppen i snitt, som viser Arduino-kortet, batteriet og sensoren inni foten." width="750" height="876" loading="lazy"></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="kapittel" aria-labelledby="rolle">
+        <h2 id="rolle">Min rolle</h2>
+        <div>
+          <p>Brukermøter, analyse og skisser gjorde vi sammen i gruppa. Jeg tok i tillegg ansvar for den tekniske delen:</p>
+          <ul>
+            <li>Skrev Arduino-koden for begge enhetene, med statusmodell, gjennomsnittsmåling, I2C-kommunikasjon og strømsparing.</li>
+            <li>Kalibrerte tersklene ved å teste sensoren i jord med ulik fuktighet.</li>
+            <li>Sto for innkjøp av komponentene, siden jeg visste best hva vi trengte.</li>
+            <li>Skrev den tekniske rapporten og laget diagrammene.</li>
+            <li>Hjalp til med å modellere soppen på nytt for 3D-print da de første filene ikke var brukbare.</li>
+            <li>Filmet og redigerte prototypevideoen, og oppdaterte prosjektsiden.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="kapittel" aria-labelledby="laerte">
+        <h2 id="laerte">Hva jeg lærte</h2>
+        <div>
+          <p>Brukerne kom nesten alltid med noe vi ikke hadde tenkt på selv. I de første intervjuene stilte jeg for mange lukkede spørsmål. Etter hvert ble jeg flinkere til å holde meg tilbake og la brukeren styre samtalen.</p>
+          <p>Teknisk lærte jeg at en enkel plan B kan redde et prosjekt. Da LoRa-radioen ikke fungerte, var det bedre å levere en stabil løsning over I2C enn en trådløs løsning som bare virket av og til.</p>
+          <p>Jeg lærte også at faste møter der alle viser fram det de har gjort, fanger opp problemer før de blir store. Det tar jeg med meg til neste prosjekt.</p>
+        </div>
+      </section>
+
+      <p class="neste"><a class="knapp" href="../#prosjekter">Tilbake til prosjektene</a></p>
+    </div>
+  </main>
+
+  <footer class="bunn innhold" id="kontakt">
+    <h2>Kontakt</h2>
+    <p><a class="epost" href="mailto:alexandra@hulte.net">alexandra@hulte.net</a></p>
+  </footer>
+
+  <script>
+    // Samme terskler som i Arduino-koden (evaluateSensor)
+    const glider = document.getElementById("raa");
+    const lamper = document.querySelectorAll(".lampe");
+    const resultat = document.getElementById("resultat");
+
+    function vurder(raaverdi) {
+      if (raaverdi > 430) return { navn: "Tørt", tekst: "Planten trenger vann", lampe: 0 };
+      if (raaverdi >= 230) return { navn: "Passe fuktig", tekst: "Ingen vanning nå", lampe: 1 };
+      return { navn: "Vått", tekst: "Jorda er våt nok", lampe: 2 };
+    }
+
+    function oppdater() {
+      const raaverdi = Number(glider.value);
+      const status = vurder(raaverdi);
+      lamper.forEach((lampe, i) => lampe.classList.toggle("pa", i === status.lampe));
+      resultat.innerHTML = "<strong>" + status.navn + "</strong><span>" + status.tekst + ". Råverdi " + raaverdi + "</span>";
+    }
+
+    glider.addEventListener("input", oppdater);
+    oppdater();
+  </script>
+</body>
+</html>

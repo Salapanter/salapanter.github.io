@@ -1,0 +1,303 @@
+/* Alexandra Hvile – portefølje
+   Farger: lys mose-hvit, mørk mose og fluesopp-rød.
+   Skrift: Bricolage Grotesque (titler) og Atkinson Hyperlegible (brødtekst). */
+
+:root {
+  --bakgrunn: #f2f4ef;
+  --flate: #e6eae2;
+  --tekst: #1c2a21;
+  --dempet: #56645a;
+  --linje: #cdd5ca;
+  --rod: #c8231b;
+  --gul: #e2a90f;
+  --gronn: #2f8a4a;
+  --av: #b9c2b6;
+
+  --tittel: "Bricolage Grotesque", system-ui, sans-serif;
+  --brod: "Atkinson Hyperlegible", system-ui, sans-serif;
+
+  --maks: 72rem;
+  --tekstbredde: 38rem;
+  --kant: clamp(1rem, 4vw, 2.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bakgrunn: #131a15;
+    --flate: #1c251f;
+    --tekst: #e3e9e2;
+    --dempet: #9eab9f;
+    --linje: #2e3a31;
+    --rod: #f0574c;
+    --gul: #f2c037;
+    --gronn: #5cc27a;
+    --av: #36423a;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bakgrunn);
+  color: var(--tekst);
+  font-family: var(--brod);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { color: var(--rod); }
+
+:focus-visible { outline: 3px solid var(--rod); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2, h3 {
+  font-family: var(--tittel);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p { margin: 0 0 1em; max-width: var(--tekstbredde); }
+
+.innhold {
+  max-width: var(--maks);
+  margin: 0 auto;
+  padding: 0 var(--kant);
+}
+
+.hopp {
+  position: absolute; left: -999px; top: 0;
+  background: var(--tekst); color: var(--bakgrunn); padding: 0.5rem 1rem;
+}
+.hopp:focus { left: 1rem; top: 1rem; z-index: 10; }
+
+/* ---------- Toppfelt ---------- */
+
+.topp {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.topp .navn { font-family: var(--tittel); font-weight: 700; text-decoration: none; font-size: 1.125rem; }
+.topp nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.topp nav a { text-decoration: none; color: var(--dempet); }
+.topp nav a:hover { color: var(--rod); }
+
+/* ---------- Forside: introduksjon ---------- */
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: end;
+  padding-top: clamp(1.5rem, 5vw, 4rem);
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+.intro h1 {
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+}
+.intro .ingress { font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.5; }
+.intro figure { margin: 0; }
+.intro figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 0.375rem; }
+.intro figcaption, .bilde figcaption { color: var(--dempet); font-size: 0.875rem; margin-top: 0.5rem; }
+
+.lenker { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1.75rem; }
+.knapp {
+  display: inline-block;
+  background: var(--tekst);
+  color: var(--bakgrunn);
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.knapp:hover { background: var(--rod); color: #fff; }
+
+/* ---------- Seksjoner ---------- */
+
+.seksjon { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--linje); }
+.seksjon > h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 2rem; }
+
+/* Prosjekter */
+.prosjekt {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  text-decoration: none;
+}
+.prosjekt img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 0.375rem; transition: transform 0.4s ease; }
+.prosjekt:hover img { transform: scale(1.015); }
+.prosjekt:hover h3 { color: var(--rod); }
+.prosjekt h3 { font-size: clamp(1.75rem, 4vw, 2.75rem); margin-bottom: 0.75rem; }
+.prosjekt .meta { color: var(--dempet); margin-bottom: 1rem; }
+.prosjekt .les { font-weight: 700; text-decoration: underline; text-underline-offset: 0.2em; }
+
+.prosjekt-liten {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--flate);
+  border-radius: 0.375rem;
+  max-width: 44rem;
+}
+.prosjekt-liten h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.prosjekt-liten p:last-child { margin-bottom: 0; }
+.status { color: var(--dempet); font-size: 0.9375rem; }
+
+/* Om meg */
+.om {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.om h3 { font-size: 1.25rem; margin-bottom: 1rem; }
+.liste { list-style: none; padding: 0; margin: 0 0 2.5rem; }
+.liste li { padding: 0.9rem 0; border-top: 1px solid var(--linje); }
+.liste li:last-child { border-bottom: 1px solid var(--linje); }
+.liste strong { display: block; }
+.liste span { color: var(--dempet); font-size: 0.9375rem; }
+.verktoy { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0 0 2.5rem; }
+.verktoy li { background: var(--flate); padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.9375rem; }
+
+/* Bunn */
+.bunn { padding-top: 3rem; padding-bottom: 3rem; border-top: 1px solid var(--linje); }
+.bunn h2 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; }
+.bunn .epost { font-size: clamp(1.15rem, 3vw, 1.5rem); font-weight: 700; }
+
+/* ---------- Prosjektside ---------- */
+
+.case-topp { padding-top: clamp(1.5rem, 5vw, 3.5rem); padding-bottom: 2rem; }
+.case-topp .tilbake { color: var(--dempet); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+.case-topp h1 { font-size: clamp(3.5rem, 11vw, 8rem); font-weight: 800; letter-spacing: -0.045em; margin-bottom: 1.25rem; }
+.case-topp .ingress { font-size: clamp(1.15rem, 2.2vw, 1.4rem); line-height: 1.5; max-width: 42rem; }
+
+.fakta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--linje);
+  border-bottom: 1px solid var(--linje);
+}
+.fakta dt { color: var(--dempet); font-size: 0.875rem; }
+.fakta dd { margin: 0.2rem 0 0; }
+
+.storbilde img { width: 100%; max-height: 80vh; object-fit: cover; border-radius: 0.375rem; }
+
+.kapittel {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding-top: clamp(3rem, 7vw, 5rem);
+}
+.kapittel > h2 { font-size: clamp(1.5rem, 3vw, 2rem); position: sticky; top: 1.5rem; align-self: start; }
+.kapittel h3 { font-size: 1.25rem; margin: 2rem 0 0.5rem; }
+.kapittel ul { padding-left: 1.2rem; max-width: var(--tekstbredde); }
+.kapittel li { margin-bottom: 0.4rem; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 4px solid var(--rod);
+  font-family: var(--tittel);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  line-height: 1.3;
+  max-width: var(--tekstbredde);
+}
+
+.bilder { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 2rem 0; }
+.bilder.tre { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.bilde { margin: 0; }
+.bilde img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 0.375rem; background: var(--flate); }
+.bilde.bred { grid-column: 1 / -1; }
+.bilde.bred img { aspect-ratio: auto; }
+.bilde.hel img { object-fit: contain; background: #fff; }
+
+/* Iterasjoner er en rekkefølge, derfor nummerert */
+.steg { list-style: none; counter-reset: steg; padding: 0 !important; margin: 0; }
+.steg > li { counter-increment: steg; position: relative; padding: 0 0 2rem 3.25rem; }
+.steg > li::before {
+  content: counter(steg);
+  position: absolute; left: 0; top: 0;
+  width: 2.1rem; height: 2.1rem; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 2px solid var(--tekst);
+  font-family: var(--tittel); font-weight: 700;
+}
+.steg > li::after { content: ""; position: absolute; left: calc(1.05rem - 1px); top: 2.4rem; bottom: 0.4rem; width: 2px; background: var(--linje); }
+.steg > li:last-child::after { display: none; }
+.steg h3 { margin-top: 0.2rem; }
+
+/* ---------- Måler-demoen ---------- */
+
+.maler {
+  margin: 2rem 0;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: var(--flate);
+  border-radius: 0.75rem;
+  max-width: 40rem;
+}
+.maler h3 { margin-top: 0; }
+.maler p { font-size: 0.9375rem; }
+.maler label { display: block; font-weight: 700; margin: 1.25rem 0 0.5rem; }
+.maler input[type="range"] { width: 100%; accent-color: var(--tekst); }
+.skala { display: flex; justify-content: space-between; color: var(--dempet); font-size: 0.8125rem; }
+
+.lys { display: flex; gap: 1rem; align-items: center; margin-top: 1.5rem; flex-wrap: wrap; }
+.lampe {
+  width: 2.75rem; height: 2.75rem; border-radius: 50%;
+  background: var(--av);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+.lampe.pa.rod { background: var(--rod); box-shadow: 0 0 1.25rem var(--rod); }
+.lampe.pa.gul { background: var(--gul); box-shadow: 0 0 1.25rem var(--gul); }
+.lampe.pa.gronn { background: var(--gronn); box-shadow: 0 0 1.25rem var(--gronn); }
+.lesning { margin-left: 0.5rem; }
+.lesning strong { display: block; font-family: var(--tittel); font-size: 1.35rem; }
+.lesning span { color: var(--dempet); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+
+pre {
+  background: var(--tekst);
+  color: var(--bakgrunn);
+  padding: 1.1rem 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  max-width: 40rem;
+}
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+
+.neste { margin-top: clamp(3rem, 7vw, 5rem); }
+
+/* ---------- Mobil ---------- */
+
+@media (max-width: 760px) {
+  .intro, .prosjekt, .om, .kapittel { grid-template-columns: minmax(0, 1fr); }
+  .intro figure { order: -1; }
+  .intro figure img { aspect-ratio: 4 / 3; }
+  .kapittel > h2 { position: static; }
+  .fakta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bilder.tre { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topp { flex-direction: column; gap: 0.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

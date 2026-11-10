@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexandra Hvile – portefølje</title>
+  <meta name="description" content="Portefølje for Alexandra Hvile, informatikkstudent ved UiO innen design, bruk og interaksjon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+  <a class="hopp" href="#hoved">Hopp til innholdet</a>
+
+  <header class="topp innhold">
+    <a class="navn" href="./">Alexandra Hvile</a>
+    <nav aria-label="Hovedmeny">
+      <a href="#prosjekter">Prosjekter</a>
+      <a href="#om">Om meg</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="hoved">
+    <section class="intro innhold">
+      <div>
+        <h1>Alexandra Hvile</h1>
+        <p class="ingress">Jeg studerer informatikk med retning design, bruk og interaksjon ved Universitetet i Oslo. Jeg liker å jobbe der brukerinnsikt og teknologi møtes: å finne ut hva folk faktisk trenger, og så bygge noe som fungerer.</p>
+        <p>Bakgrunnen min er fra kunst, design og arkitektur på videregående og halvannet år i kundesupport. Nå bygger jeg prototyper med Arduino, skriver Python og designer i Figma.</p>
+        <div class="lenker">
+          <a class="knapp" href="aspire/">Se prosjektet Aspire</a>
+          <a href="#kontakt">Ta kontakt</a>
+        </div>
+      </div>
+      <figure>
+        <img src="bilder/sopp-i-bedet.jpg" alt="En rød og hvit sopp-formet sensor står i et blomsterbed mellom grønne blader og lilla blomster." width="1200" height="1600">
+        <figcaption>Aspire: en jordfuktighetsmåler formet som en fluesopp.</figcaption>
+      </figure>
+    </section>
+
+    <section class="seksjon innhold" id="prosjekter" aria-labelledby="prosjekter-tittel">
+      <h2 id="prosjekter-tittel">Prosjekter</h2>
+
+      <a class="prosjekt" href="aspire/">
+        <img src="bilder/i-bruk.jpg" alt="En hånd trykker på knappen på en treboks med symbolene sol, sky og dråpe, med den røde soppen i bakgrunnen." width="1064" height="1418" loading="lazy">
+        <div>
+          <h3>Aspire</h3>
+          <p class="meta">IN1060 Bruksorientert design, våren 2026. Gruppeprosjekt.</p>
+          <p>Hagebrukerne vi snakket med visste ofte ikke når plantene trengte vann. Vi laget et todelt system: en sopp som måler jorda i bedet, og en boks inne som viser svaret med et lys. Jeg hadde ansvar for Arduino-koden og den tekniske løsningen.</p>
+          <span class="les">Les hele caset</span>
+        </div>
+      </a>
+
+      <div class="prosjekt-liten">
+        <h3>Puggis</h3>
+        <p class="status">Under arbeid, eget prosjekt</p>
+        <p>En webapp for å holde oversikt over studiene. Backenden er skrevet i Python og Flask, og jeg designer nå grensesnittet i Figma før jeg bygger frontenden.</p>
+      </div>
+    </section>
+
+    <section class="seksjon innhold" id="om" aria-labelledby="om-tittel">
+      <h2 id="om-tittel">Om meg</h2>
+      <div class="om">
+        <div>
+          <h3>Erfaring</h3>
+          <ul class="liste">
+            <li><strong>Production Associate, Lima Foto</strong><span>Juli 2026 – nå. Skolekataloger fra bilder til trykkfil i InDesign, med oppfølging i Trello.</span></li>
+            <li><strong>Support Associate, Link Mobility</strong><span>Februar 2025 – juli 2026. Kundesupport på telefon og e-post i Salesforce og Jira, og oppsett av kontoer under en migrering.</span></li>
+          </ul>
+          <h3>Utdanning</h3>
+          <ul class="liste">
+            <li><strong>Bachelor i informatikk: design, bruk og interaksjon</strong><span>Universitetet i Oslo, 2025 – nå</span></li>
+            <li><strong>Kunst, design og arkitektur</strong><span>Lørenskog videregående skole, 2021–2024</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Verktøy og språk</h3>
+          <ul class="verktoy">
+            <li>Python</li><li>Flask</li><li>HTML og CSS</li><li>Arduino (C++)</li><li>Figma</li><li>InDesign</li><li>Salesforce</li><li>Jira</li><li>Trello</li><li>Microsoft 365</li>
+          </ul>
+          <h3>Metoder</h3>
+          <ul class="verktoy">
+            <li>Brukerintervju</li><li>Observasjon</li><li>Workshop</li><li>Prototyping</li><li>Brukertesting</li><li>Universell utforming (WCAG)</li>
+          </ul>
+          <h3>Språk</h3>
+          <p>Norsk og engelsk, flytende muntlig og skriftlig.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bunn innhold" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Send meg gjerne en e-post.</p>
+    <p><a class="epost" href="mailto:alexandra@hulte.net">alexandra@hulte.net</a></p>
+  </footer>
+</body>
+</html>
