@@ -178,6 +178,7 @@ p { margin: 0 0 1em; max-width: var(--tekstbredde); }
 .bunn { padding-top: 3rem; padding-bottom: 3rem; border-top: 1px solid var(--linje); }
 .bunn h2 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; }
 .bunn .epost { font-size: clamp(1.15rem, 3vw, 1.5rem); font-weight: 700; }
+.kontaktlenker { display: flex; gap: 1.5rem; list-style: none; padding: 0; margin: 0.5rem 0 0; font-size: 1.125rem; }
 
 /* ---------- Prosjektside ---------- */
 
